@@ -6,6 +6,7 @@
 
 :root {
   --bg-primary: #1992d4;
+  --bg-default: #e2e8f0;
 }
 
 img {
@@ -23,6 +24,8 @@ body {
 
   height: 100vh;
   font-family: 'Roboto', sans-serif;
+
+  overflow: hidden;
 }
 
 aside {
@@ -99,7 +102,81 @@ header {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 
-  background-color: cadetblue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+header svg {
+  height: 20px;
+  width: 20px;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 48px;
+  padding: 0 24px;
+}
+
+.search {
+  display: grid;
+  align-items: center;
+}
+
+.search form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+
+.search > form > button {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: white;
+}
+
+.search > form > input {
+  border-radius: 25px;
+  border: 0;
+  background-color: var(--bg-default);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 4px 12px;
+}
+
+.user-area {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+
+.notification {
+  display: grid;
+  justify-self: center;
+}
+
+.user-area > img {
+  justify-self: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: #ccc;
+}
+
+.username {
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 main {
@@ -109,6 +186,10 @@ main {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
+
+  background-color: cadetblue;
+
+  overflow: auto;
 }
 
 .projects {
