@@ -12,6 +12,8 @@
 }
 
 img {
+  object-fit: cover;
+  border: 2px solid #ccc;
   width: 24px;
   height: 24px;
 }
@@ -286,7 +288,11 @@ main {
   grid-template-columns: repeat(3, auto);
   justify-content: flex-end;
   gap: 16px;
+}
 
+.project > .actions img {
+  border: none;
+  cursor: pointer;
 }
 
 .announcements {
